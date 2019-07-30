@@ -13,18 +13,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
 
+import org.checkerframework.checker.androidresource.qual.LayoutRes;
+
 import java.util.ArrayList;
 
 public class AddingFavSearchSuggestionAdapter extends ArrayAdapter<PhoneContact> {
     private ArrayList<PhoneContact> suggestions;
-    private int layoutId;
+    private @LayoutRes int layoutId;
     int orangeColor = getContext().getResources().getColor(R.color.dark_orange);
     private LayoutInflater mInflater;
     private String queryString;
     private ArrayList<PhoneContact> phoneContacts;
     private final ForegroundColorSpan fcs = new ForegroundColorSpan(orangeColor);
 
-    public AddingFavSearchSuggestionAdapter(Context context, int resource, ArrayList<PhoneContact> phoneContacts) {
+    public AddingFavSearchSuggestionAdapter(Context context, @LayoutRes int resource, ArrayList<PhoneContact> phoneContacts) {
         super(context, resource);
         this.suggestions = new ArrayList<>();
         this.phoneContacts = phoneContacts;

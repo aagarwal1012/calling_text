@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
 
+import org.checkerframework.checker.androidresource.qual.LayoutRes;
+
 import java.util.ArrayList;
 
 /**
@@ -22,13 +24,13 @@ import java.util.ArrayList;
 public class PhoneSearchSuggestionAdapter extends ArrayAdapter<PhoneContact> {
 
     private ArrayList<PhoneContact> suggestions;
-    private int layoutId;
+    private @LayoutRes int layoutId;
     private LayoutInflater mInflater;
     private String queryString;
     private ArrayList<PhoneContact> phoneContacts;
     private final ForegroundColorSpan fcs = new ForegroundColorSpan(Color.parseColor("#be5e00"));
 
-    public PhoneSearchSuggestionAdapter(Context context, int resource, ArrayList<PhoneContact> phoneContacts) {
+    public PhoneSearchSuggestionAdapter(Context context, @LayoutRes int resource, ArrayList<PhoneContact> phoneContacts) {
         super(context, resource);
         this.suggestions = new ArrayList<>();
         this.phoneContacts = phoneContacts;

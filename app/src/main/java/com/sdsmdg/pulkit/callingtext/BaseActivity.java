@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
@@ -33,7 +34,7 @@ public class BaseActivity extends AppCompatActivity implements ActionBar.TabList
     //session manager class
     SessionManager session;
     public static TabLayout tabLayout;
-    public static int[] imageIds;
+    public static @DrawableRes int[] imageIds;
     public static String receiver = "7248187747";
 
     @Override
