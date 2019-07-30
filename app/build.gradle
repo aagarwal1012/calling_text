@@ -57,7 +57,8 @@ gradle.projectsEvaluated {
     tasks.withType(JavaCompile).all { compile ->
         if (compile.name.contains("CheckTypes")) {
             compile.options.compilerArgs += [
-                    "-Xbootclasspath/p:${configurations.checkerFrameworkAnnotatedJDK.asPath}"
+                    "-Xbootclasspath/p:${configurations.checkerFrameworkAnnotatedJDK.asPath}",
+                    "-Astubs=stub_files"
             ]
         }
     }
