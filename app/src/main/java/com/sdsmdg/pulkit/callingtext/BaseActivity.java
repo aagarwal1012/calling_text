@@ -16,6 +16,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
+
+import org.checkerframework.checker.androidresource.qual.DrawableRes;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +36,7 @@ public class BaseActivity extends AppCompatActivity implements ActionBar.TabList
     //session manager class
     SessionManager session;
     public static TabLayout tabLayout;
-    public static int[] imageIds;
+    public static @DrawableRes int[] imageIds;
     public static String receiver = "7248187747";
 
     @Override

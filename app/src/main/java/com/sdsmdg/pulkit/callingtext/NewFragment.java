@@ -26,6 +26,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.checkerframework.checker.androidresource.qual.IdRes;
+
 import java.util.Date;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -174,7 +176,7 @@ public class NewFragment extends Fragment implements View.OnClickListener {
     //@Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        @IdRes int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
